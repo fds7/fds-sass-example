@@ -1,0 +1,75 @@
+// partial & import
+@import 'open-color';
+
+// 변수
+$main-color: $oc-red-3;
+
+h1 {
+  color: $main-color;
+}
+
+p {
+  color: $main-color;
+}
+
+button {
+  background-color: $main-color;
+}
+
+// Nesting - 비추!
+main {
+  ul {
+    li {
+      color: red;
+    }
+  }
+}
+
+// Nesting - 강추!
+.main {
+  &:hover {
+    color: red;
+  }
+  &__profile-photo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    &--anonymous {
+      border: 1px solid silver;
+    }
+  }
+}
+
+// 믹스인과 미디어쿼리
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin desktop {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+.box {
+  @include border-radius(10px);
+  @include desktop {
+    color: red;
+  }
+}
+
+// 연산자
+.large-box {
+  width: 300px;
+}
+
+.large-box__left {
+  width: 300px * 0.7;
+}
+
+.large-box__right {
+  width: 300px * 0.3;
+}

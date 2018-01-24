@@ -1,0 +1,55 @@
+h1 {
+  color: #ffa8a8;
+}
+
+p {
+  color: #ffa8a8;
+}
+
+button {
+  background-color: #ffa8a8;
+}
+
+main ul li {
+  color: red;
+}
+
+.main:hover {
+  color: red;
+}
+
+.main__profile-photo {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.main__profile-photo--anonymous {
+  border: 1px solid silver;
+}
+
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+  .box {
+    color: red;
+  }
+}
+
+.large-box {
+  width: 300px;
+}
+
+.large-box__left {
+  width: 210px;
+}
+
+.large-box__right {
+  width: 90px;
+}
+/*# sourceMappingURL=index.css.map */
